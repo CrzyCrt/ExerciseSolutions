@@ -1,0 +1,19 @@
+def response(hey_bob):
+    """Returns one of five responses, based on the str passed to
+    hey_bob.
+    
+    :param hey_bob: the words spoken to Bob,as a str
+    :return: Bob's response"""
+    
+    statement = hey_bob.strip()
+    
+    if statement.isupper() and statement.endswith('?'):
+        return "Calm down, I know what I'm doing!"
+    elif statement.endswith('?'):
+        return 'Sure.'
+    elif statement.isupper():
+        return 'Whoa, chill out!'
+    elif statement == '':
+        return 'Fine. Be that way!'
+    else:
+        return 'Whatever.'

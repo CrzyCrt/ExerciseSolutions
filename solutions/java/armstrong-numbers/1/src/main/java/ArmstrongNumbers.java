@@ -38,7 +38,11 @@ class ArmstrongNumbers {
         }
 
         for (int digit : digits) {
-            calculation += Math.pow(digit, power);
+            int term = 1;
+            for (int i = 0; i < power; i++) {
+                term *= digit;
+            }
+            calculation += term;
         }
 
         return calculation == numberToCheck;
